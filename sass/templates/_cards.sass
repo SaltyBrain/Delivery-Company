@@ -1,0 +1,72 @@
+.provider
+  position: relative
+  z-index: 1
+  &__video
+    background: url('../img/video-bg.png') no-repeat center / cover
+    height: 100vh
+    text-align: center
+    padding-top: 100px
+    display: flex
+    justify-content: center
+    position: relative
+    z-index: 9
+    &::before
+      content: ''
+      width: 100%
+      height: 100%
+      background-color: #000000
+      background-image: linear-gradient(to top, rgba(255, 204, 0, 0.7) 0%, rgba(186, 0, 0, 0) 100%)
+      opacity: 0.7
+      position: absolute
+      top: 0
+      left: 0
+      z-index: 0
+    &-block
+      z-index: 1
+.video
+  &__header
+    color: $light
+    font-size: 50px
+    font-weight: 400
+    line-height: 80px
+    letter-spacing: 1.5px
+  &__button
+    &-play
+      margin-top: 20px
+      padding: 30px
+      border-radius: 50%
+      border: none
+      background: $warning url('../img/play-icon.png') no-repeat center / 25%
+      box-shadow: 0 10px 18px rgba(255, 204, 0, 0.4)
+.cards
+  &--card
+    max-width: 33%
+    box-shadow: 0 10px 18px rgba(191, 191, 191, 0.4)
+    &__header
+      font-size: 20px
+      font-weight: 700
+      letter-spacing: 0.6px
+      color: $danger
+      padding-left: 30px
+    &__list
+      padding-left: 30px
+      font-size: 16px
+      font-weight: 400
+      color: $asphalt
+.list
+  margin-bottom: 10px
+  display: flex
+  align-items: center
+  &::before
+    content: ''
+    width: 12px
+    height: 12px
+    background: url('../img/arrow-list.svg') no-repeat center / cover
+    margin-right: 10px
+.cards
+  display: flex
+  justify-content: space-between
+.section-cards
+  position: relative
+  margin-top: -200px
+  z-index: 3
