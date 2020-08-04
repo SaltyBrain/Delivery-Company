@@ -1,0 +1,56 @@
+.footer
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  &-img
+    &__left
+      display: flex
+      &::before
+        content: ''
+        height: 100%
+        width: 40px
+        background-color: $danger
+  &-list
+    margin-bottom: 10px
+    display: flex
+    align-items: baseline
+    &::before
+      content: ''
+      width: 12px
+      height: 12px
+      background: url('../img/arrow-footer_list.svg') no-repeat center / cover
+      margin-right: 10px
+  &-img
+    &__right
+      display: flex
+      &::after
+        content: ''
+        height: 100%
+        width: 40px
+        background-color: $warning
+  &__menu
+    display: flex
+    justify-content: space-around
+    &-section
+      display: flex
+      flex-direction: column
+      &:last-child
+        .menu-section__link
+          &:hover
+            color: #017edf
+.section
+  &-title
+    text-transform: uppercase
+    color: $danger
+    display: flex
+.menu
+  &-section
+    &__link
+      text-transform: uppercase
+      text-decoration: none
+      color: #777777
+      &:hover
+        color: #ffcc00
+        text-decoration: none
+
+  
