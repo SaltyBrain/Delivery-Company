@@ -304,6 +304,13 @@ template {
 [hidden] {
   display: none; }
 
+@font-face {
+  font-family: 'Poppins Regular';
+  src: url("../fonts/Poppins/Poppins-Regular.woff") format("woff"), url("../fonts/Poppins/Poppins-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; }
+
 .container {
   max-width: 1200px;
   margin: auto; }
@@ -833,3 +840,6 @@ body {
   .menu-section__link:hover {
     color: #ffcc00;
     text-decoration: none; }
+
+body {
+  font-family: 'Poppins Regular', sans-serif; }
