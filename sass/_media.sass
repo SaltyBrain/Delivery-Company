@@ -9,12 +9,42 @@
 
 @media screen and ( max-width: 1170px )
   .services
+    padding-top: 50px
+    padding-bottom: 50px
+    &__header
+      margin-bottom: 40px
     &__info
       flex-wrap: wrap
+      &-button
+        margin-top: 0
       &-item
-        flex-basis: 50%
+        max-width: 33%
+        margin-bottom: 20px
+      &-card
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        width: 80%
+        margin: auto
+        align-items: center
+  .info
+    &-card
+      &--title
+        margin-top: 0
+        &:after
+          margin-top: 0
+          margin-bottom: 0
+      &--subtitle
+        margin-bottom: 0
+      &--dropdown
+        margin-bottom: 1rem
+  .info
+    &-item
+      &--title
+        line-height: 50px
+      &--img
+        margin-bottom: 20px
 @media screen and ( max-width: 1050px )
-
   .hero
     &__block
       max-width: 60%
@@ -23,7 +53,15 @@
         max-width: 82%
       &-info
         font-size: 1rem
-
+  .info
+    &-item
+      &--subtitle
+        font-size: 1rem
+  .interface
+    text-align: center
+  .block
+    &-button
+      margin-right: 0
 @media screen and ( max-width: 1000px )
   .hero
     &__block
@@ -32,13 +70,46 @@
         margin-top: 5rem
       &-subtitle
         font-size: 1rem
+
+@media screen and ( max-width: 872px ) 
+  .services
+    &__info
+      &-item
+        max-width: 50%
+        text-align: center
+  .info
+    &-item
+      &--subtitle
+        width: 80%
+        margin: auto
+      &--img
+        margin-bottom: 0
+      &--title
+        line-height: 40px
+
+  
 @media screen and ( max-width: 750px )  
   .subheader
     padding: 20px 0
     &__menu
       &-items
         display: none
+  .info
+    &-card
+      &--subtitle
+        display: none
 
+@media screen and ( max-width: 590px )
+  .services
+    &__info
+      &-item
+        max-width: 85%
+        margin: auto
+        margin-bottom: 20px
+  .info
+    &-item
+      &--subtitle
+        font-size: 0.8rem
 @media screen and ( max-width: 560px )
     .hero
       &__block
@@ -57,7 +128,13 @@
       &-item
         &::after
           margin: 0 15px
-
+    .services
+      &__header
+        &-title
+          text-transform: uppercase
+          font-size: 3rem
+        &-bg
+          display: none
 @media screen and ( max-width: 450px )
   .header
     &__menu
@@ -73,6 +150,25 @@
         &::after
           margin-top: 10px
           margin-bottom: 10px
+  .services
+    &__info
+      &-card
+        flex-direction: column
+        width: 80%
+        margin: auto
+        align-items: center
+  .block  
+    &-button
+      width: 90%
+  .info
+    &-card
+      &--title
+        margin-bottom: 1.5rem
+        &::after
+          margin-top: 0.5rem
+          margin-bottom: 0.5rem
+  .interface
+    width: 90%
 @media screen and ( max-width: 370px )
     .hero
       &__block
@@ -85,6 +181,10 @@
         margin: auto
         &__light
           margin-top: 1rem
+    .services
+      &__info
+        &-item
+          max-width: 70%
 @media screen and ( max-width: 290px )
     .hero
       &__block

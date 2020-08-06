@@ -461,7 +461,7 @@ body {
     .services__header-title {
       position: relative;
       color: #ba0000;
-      font-size: 50px;
+      font-size: 3.57rem;
       font-weight: 900;
       line-height: 80px;
       letter-spacing: 1.5px;
@@ -479,16 +479,16 @@ body {
     display: flex;
     justify-content: space-between; }
     .services__info-item {
-      flex-basis: 25%; }
+      max-width: 25%; }
     .services__info-card {
-      max-width: 25%;
       background-color: #ba0000;
       padding: 30px; }
     .services__info-button {
       margin-top: 20px; }
 
 .info-item--img {
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  max-width: 100%; }
 
 .info-item--title {
   color: #ba0000;
@@ -857,10 +857,38 @@ body {
     margin-left: 0; } }
 
 @media screen and (max-width: 1170px) {
-  .services__info {
-    flex-wrap: wrap; }
-    .services__info-item {
-      flex-basis: 50%; } }
+  .services {
+    padding-top: 50px;
+    padding-bottom: 50px; }
+    .services__header {
+      margin-bottom: 40px; }
+    .services__info {
+      flex-wrap: wrap; }
+      .services__info-button {
+        margin-top: 0; }
+      .services__info-item {
+        max-width: 33%;
+        margin-bottom: 20px; }
+      .services__info-card {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 80%;
+        margin: auto;
+        align-items: center; }
+  .info-card--title {
+    margin-top: 0; }
+    .info-card--title:after {
+      margin-top: 0;
+      margin-bottom: 0; }
+  .info-card--subtitle {
+    margin-bottom: 0; }
+  .info-card--dropdown {
+    margin-bottom: 1rem; }
+  .info-item--title {
+    line-height: 50px; }
+  .info-item--img {
+    margin-bottom: 20px; } }
 
 @media screen and (max-width: 1050px) {
   .hero__block {
@@ -869,7 +897,13 @@ body {
     .hero__block-subtitle {
       max-width: 82%; }
     .hero__block-info {
-      font-size: 1rem; } }
+      font-size: 1rem; }
+  .info-item--subtitle {
+    font-size: 1rem; }
+  .interface {
+    text-align: center; }
+  .block-button {
+    margin-right: 0; } }
 
 @media screen and (max-width: 1000px) {
   .hero__block-title {
@@ -878,11 +912,33 @@ body {
   .hero__block-subtitle {
     font-size: 1rem; } }
 
+@media screen and (max-width: 872px) {
+  .services__info-item {
+    max-width: 50%;
+    text-align: center; }
+  .info-item--subtitle {
+    width: 80%;
+    margin: auto; }
+  .info-item--img {
+    margin-bottom: 0; }
+  .info-item--title {
+    line-height: 40px; } }
+
 @media screen and (max-width: 750px) {
   .subheader {
     padding: 20px 0; }
     .subheader__menu-items {
-      display: none; } }
+      display: none; }
+  .info-card--subtitle {
+    display: none; } }
+
+@media screen and (max-width: 590px) {
+  .services__info-item {
+    max-width: 85%;
+    margin: auto;
+    margin-bottom: 20px; }
+  .info-item--subtitle {
+    font-size: 0.8rem; } }
 
 @media screen and (max-width: 560px) {
   .hero__block {
@@ -898,7 +954,12 @@ body {
     .hero__block-info {
       font-size: 0.8rem; }
   .block-item::after {
-    margin: 0 15px; } }
+    margin: 0 15px; }
+  .services__header-title {
+    text-transform: uppercase;
+    font-size: 3rem; }
+  .services__header-bg {
+    display: none; } }
 
 @media screen and (max-width: 450px) {
   .header__menu-lang {
@@ -909,7 +970,21 @@ body {
     font-size: 0.8rem; }
   .hero__block-title::after {
     margin-top: 10px;
-    margin-bottom: 10px; } }
+    margin-bottom: 10px; }
+  .services__info-card {
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+    align-items: center; }
+  .block-button {
+    width: 90%; }
+  .info-card--title {
+    margin-bottom: 1.5rem; }
+    .info-card--title::after {
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem; }
+  .interface {
+    width: 90%; } }
 
 @media screen and (max-width: 370px) {
   .hero__block-buttons {
@@ -919,7 +994,9 @@ body {
     width: 80%;
     margin: auto; }
     .block-button__light {
-      margin-top: 1rem; } }
+      margin-top: 1rem; }
+  .services__info-item {
+    max-width: 70%; } }
 
 @media screen and (max-width: 290px) {
   .hero__block-title {
