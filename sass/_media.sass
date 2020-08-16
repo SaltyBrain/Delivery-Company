@@ -1,4 +1,27 @@
+@media screen and ( max-width: 1400px )
+  .section
+    &-title
+      font-size: 1rem
+  .menu
+    &-section
+      &__link
+        font-size: 0.8rem
+@media screen and ( max-width: 1300px )
+  .footer
+    &-img
+      &__left
+        &::before
+          display: none
+      &__right
+        &::after
+          display: none
 @media screen and ( max-width: 1250px )
+  .container-wrap
+    max-width: 900px
+  .partners
+    &__cards
+      &-card
+        flex-basis: 40%
   .subheader
     &__menu
       &-item
@@ -38,12 +61,38 @@
         margin-bottom: 0
       &--dropdown
         margin-bottom: 1rem
+      &--search
+        margin-right: 10px
   .info
     &-item
       &--title
         line-height: 50px
       &--img
         margin-bottom: 20px
+  .cards
+    display: flex
+    flex-direction: column
+    flex-basis: 80%
+    align-items: center
+    &--card
+      margin: auto
+      max-width: 80%
+  .img
+    width: 100%
+@media screen and ( max-width: 1120px )
+  .footer
+    &-img
+      &__left
+        display: none
+    &-img
+      &__right
+        display: none
+@media screen and ( max-width: 1100px )
+  .partners
+    &__cards
+      &-card
+        margin: auto
+        margin-bottom: 1rem
 @media screen and ( max-width: 1050px )
   .hero
     &__block
@@ -70,7 +119,18 @@
         margin-top: 5rem
       &-subtitle
         font-size: 1rem
-
+  .provider
+    &__video
+      padding-top: 0
+  .forms
+    margin-top: 4rem
+    margin-bottom: 4rem
+    &__container
+      flex-wrap: wrap
+      justify-content: center
+    &__form
+      max-width: 80%
+      margin-bottom: 3rem
 @media screen and ( max-width: 872px ) 
   .services
     &__info
@@ -86,9 +146,15 @@
         margin-bottom: 0
       &--title
         line-height: 40px
-
-  
-@media screen and ( max-width: 750px )  
+  .video
+    &__header
+      font-size: 40px
+  .catchword
+    padding-top: 3.5rem
+    padding-bottom: 3.5rem
+@media screen and ( max-width: 750px )
+  .container-wrap
+    max-width: 560px
   .subheader
     padding: 20px 0
     &__menu
@@ -98,7 +164,14 @@
     &-card
       &--subtitle
         display: none
-
+  .video
+    &__header
+      font-size: 30px
+  .catchword
+    &__info
+      &-subtitle
+        font-size: 0.8rem
+        max-width: 100%
 @media screen and ( max-width: 590px )
   .services
     &__info
@@ -110,6 +183,9 @@
     &-item
       &--subtitle
         font-size: 0.8rem
+  .partners
+    padding-top: 2rem
+    padding-bottom: 2rem
 @media screen and ( max-width: 560px )
     .hero
       &__block
@@ -135,6 +211,32 @@
           font-size: 3rem
         &-bg
           display: none
+@media screen and ( max-width: 495px )
+  .cards
+    padding-top: 1rem
+    padding-bottom: 1rem
+    &--card
+      margin-bottom: 1rem
+      &__img
+        display: none
+  .section
+    &-cards
+      margin-top: 0
+  .form
+    &__input
+      font-size: 0.8rem
+      padding: 0
+      padding-left: 5px
+      margin-bottom: 0.7rem
+  .photo
+    &__block
+      &::before
+        display: none
+  .catchword
+    &__button
+      &-self
+        font-size: 0.6rem
+        padding: 5px 15px
 @media screen and ( max-width: 450px )
   .header
     &__menu
@@ -146,6 +248,8 @@
       font-size: 0.8rem
   .hero
     &__block
+      &-buttons
+        text-align: center
       &-title
         &::after
           margin-top: 10px
@@ -157,9 +261,14 @@
         width: 80%
         margin: auto
         align-items: center
+    &__header
+      &-title
+        line-height: 50px
   .block  
     &-button
       width: 90%
+      text-align: center
+      margin-bottom: 10px
   .info
     &-card
       &--title
@@ -169,6 +278,19 @@
           margin-bottom: 0.5rem
   .interface
     width: 90%
+  .form
+    &__search
+      &-header
+        display: none
+      &-list
+        font-size: 0.7rem
+  .section
+    &-title
+      font-size: 0.8rem
+  .menu
+    &-section
+      &__link
+        font-size: 0.6rem
 @media screen and ( max-width: 370px )
     .hero
       &__block
@@ -185,6 +307,30 @@
       &__info
         &-item
           max-width: 70%
+    .img
+      width: 100%
+    .forms
+      margin-top: 2rem
+      margin-bottom: 2rem  
+    .form
+      &__input
+        font-size: 0.6rem
+    .catchword
+      &__info
+        &-subtitle
+          font-size: 0.7rem    
+      &__button
+        &-self
+          font-size: 0.6rem
+          padding: 3px 10px
+    .partners
+      &__cards
+        &-card
+          padding: 25px 3px
+          &:nth-child(1)
+            padding: 25px 3px
+          &:nth-child(4)
+            padding: 25px 3px
 @media screen and ( max-width: 290px )
     .hero
       &__block
@@ -201,3 +347,8 @@
             margin-bottom: 10px
     .subheader
       padding: 20px 0
+@media screen and ( max-height: 429px )
+    .hero
+      &__block
+        &-info
+          display: none
