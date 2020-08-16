@@ -361,6 +361,20 @@ body {
     background: none;
     box-shadow: none; }
 
+.scrollUp-button {
+  position: fixed;
+  z-index: 100;
+  top: 550px;
+  right: 100px;
+  cursor: pointer; }
+
+.scrollUp {
+  display: flex;
+  width: 50px;
+  height: 50px;
+  background: url("../img/Arrow-Down-Red.svg") no-repeat center;
+  transform: rotate(180deg); }
+
 .header {
   background-color: #ba0000;
   color: #ffffff;
@@ -370,6 +384,10 @@ body {
     justify-content: space-between; }
     .header__menu-right {
       display: flex; }
+    .header__menu-button {
+      border: none;
+      background-color: #ba0000;
+      color: #ffffff; }
   .header__contacts {
     display: flex;
     align-items: center;
@@ -383,7 +401,7 @@ body {
 
 .subheader {
   background-color: #ffcc00;
-  padding: 55px 0; }
+  padding: 30px 0; }
   .subheader__menu {
     display: flex;
     justify-content: space-between;
@@ -853,6 +871,10 @@ body {
   .menu-section__link:hover {
     color: #ffcc00;
     text-decoration: none; }
+
+@media screen and (max-width: 1600px) {
+  .scrollUp-button {
+    right: 10px; } }
 
 @media screen and (max-width: 1400px) {
   .section-title {
