@@ -3,7 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/animate.min.css">
+  <link rel="stylesheet" href="css/jquery.fancybox.min.css">
   <link rel="stylesheet" href="css/style.css">
   <title>DhL</title>
 </head>
@@ -11,7 +16,10 @@
   <header class="header">
     <div class="container">
       <div class="header__menu">
-        <button class="header__menu-button"><span class="header__menu-lang">English</span></button>
+        <select class="header__menu-button">
+          <option class="header__menu-lang">English</option>
+          <option class="header__menu-lang">Русский</option>
+        </select>
         <div class="header__menu-right">
           <div class="header__contacts">
           <button class="header__menu-button">
@@ -63,10 +71,10 @@
   <section class="hero">
     <div class="container">
       <div class="hero__block">
-        <div class="hero__block-title">We Deliver <br> With Speed</div>
-        <div class="hero__block-subtitle">When an unknown printer took a galley of type and scrambled <br>
+        <div class="hero__block-title wow fadeIn">We Deliver <br> With Speed</div>
+        <div class="hero__block-subtitle wow fadeInRight">When an unknown printer took a galley of type and scrambled <br>
         it to make a type specimen book. It has survived not only five centuries</div>
-        <div class="hero__block-info">
+        <div class="hero__block-info wow fadeInLeft">
           <div class="block-item">amazing</div>
           <div class="block-item">quick</div>
           <div class="block-item">24/7 supports</div>
@@ -82,7 +90,7 @@
       </div>
     </div>
   </section>
-  <section class="services">
+  <section class="services wow fadeIn">
     <div class="container">
       <div class="services__header">
         <div class="services__header-title" id="parcel">Awesome Services</div>
@@ -133,17 +141,18 @@
       </div>
     </div>
   </section>
-  <section class="provider" id="about">
+  <section class="provider wow fadeIn" id="about">
     <div class="provider__video">
       <div class="provider__video-block">
         <h1 class="video__header">One of the best international service provider</h1>
-        <div class="video__button">
-          <button class="video__button-play"></button>
+        <div class="video__button" id="player">
+          <!-- <script src="https://www.youtube.com/iframe_api"></script> -->
+          <a data-fancybox href="https://www.youtube.com/watch?v=EtUZpEwaif4"><button class="video__button-play"></button></a>
         </div>
       </div>
     </div>
   </section>
-  <section class= "section-cards">
+  <section class= "section-cards wow fadeIn">
     <div class="container">
       <div class="cards">
         <div class="cards--card">
@@ -185,69 +194,52 @@
       </div>
     </div>
   </section>
-  <section class="forms">
+  <section class="forms wow fadeIn">
     <div class="container">
       <div class="forms__container" id="formExpress">
-        <div class="forms__form">
-          <ul class="nav nav-tabs" id="myTab" role="tablist">
-            <li class="nav-item form__tab" role="presentation">
-              <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Express</a>
-            </li>
-            <li class="nav-item form__tab" role="presentation">
-              <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Logistics</a>
-            </li>
+        <div class="tabs forms__form">
+
+          <ul class="tabs__caption forms__header">
+            <li class="forms__item active">Express</li>
+            <li class="forms__item">Logistics</li>
           </ul>
-          <div class="tab-content" id="myTabContent">
-            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                <form class="form__express form__track" action="#">
-                  <label class="form__label label__track" for="user-track"></label>
-                  <input type="text" class="form__input input__track" id="user-track" placeholder="Track your shipment">
-                  <label class="form__label label__track" for="user-login"></label>
-                  <input type="text" class="form__input input__track" id="user-login" placeholder="New login">
-                  <label class="form__label label__track" for="dhl-point"></label>
-                  <input type="text" class="form__input input__track" id="dhl-point" placeholder="Find Dhl point">
-                  <div class="info-card--dropdown form__search">
-                    <div class="form__link">
-                      <div>Find a service</div>
-                      <a href="#" class="info-card--dropdown-link form__search-link">
-                        <img src="img/arrow-up.png" alt="">
-                      </a>
-                    </div>
-                    <div class="form__search-list">
-                      <h5 class="form__search-header">International Services to Another Country</h5>
-                      <div class="list">Emergency</div>
-                      <div class="list">Time Critical</div>
-                      <div class="list">Less Urgent</div>
-                    </div>
-                  </div>
-                </form>
-            </div>
-            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-              <form class="form__express form__track" action="#">
-                <label class="form__label label__track" for="user-track"></label>
-                <input type="text" class="form__input input__track" id="user-track" placeholder="Track your shipment">
-                <label class="form__label label__track" for="user-login"></label>
-                <input type="text" class="form__input input__track" id="user-login" placeholder="New login">
-                <label class="form__label label__track" for="dhl-point"></label>
-                <input type="text" class="form__input input__track" id="dhl-point" placeholder="Find Dhl point">
-                <div class="info-card--dropdown form__search">
-                  <div class="form__link">
-                    <div>Find a service</div>
-                    <a href="#" class="info-card--dropdown-link form__search-link">
-                      <img src="img/arrow-up.png" alt="">
-                    </a>
-                  </div>
-                  <div class="form__search-list">
-                    <h5 class="form__search-header">International Services to Another Country</h5>
-                    <div class="list">Emergency</div>
-                    <div class="list">Time Critical</div>
-                    <div class="list">Less Urgent</div>
-                  </div>
+          
+          <div class="tabs__content active">
+           <form action="#" class="form__container">
+             <input class="forms__input" type="text" placeholder="track your shipment">
+             <input class="forms__input" type="text" placeholder="new login">
+             <input class="forms__input" type="text" placeholder="find dhl point">
+              <div class="info-card">
+                <input class="forms__input form__search" type="submit" value= "find a service">
+                <div class="form__search-list">
+                  <h5 class="form__search-header">International Services to Another Country</h5>
+                  <div class="forms__list">Emergency</div>
+                  <div class="forms__list">Time Critical</div>
+                  <div class="forms__list">Less Urgent</div>
                 </div>
-              </form>
-            </div>
+              </div>
+           </form>
           </div>
-        </div>
+          
+          <div class="tabs__content">
+            <form action="#" class="form__container">
+              <input class="forms__input" type="text" placeholder="track your shipment">
+              <input class="forms__input" type="text" placeholder="new login">
+              <input class="forms__input" type="text" placeholder="find dhl point">
+               <div class="info-card">
+                 <input class="forms__input form__search" type="submit" value= "find a service">
+                 <div class="form__search-list">
+                   <h5 class="form__search-header">International Services to Another Country</h5>
+                   <div class="forms__list">Emergency</div>
+                   <div class="forms__list">Time Critical</div>
+                   <div class="forms__list">Less Urgent</div>
+                 </div>
+               </div>
+            </form>
+           </div>
+          
+        </div><!-- .tabs-->
+        <!-- forms__form -->
         <div class="photo__block">
           <img style="width: 100%;" src="../img/block-photo.png" alt="" class="photo__block-img">
           <img class="photo__block-logo" src="../img/dhl_logo.png" alt="">
@@ -255,7 +247,7 @@
       </div>
     </div>
   </section>
-  <section class="catchword">
+  <section class="catchword wow fadeIn">
     <div class="catchword__block container">
       <div class="catchword__info">
         <h3 class="catchword__info-title">
@@ -277,7 +269,7 @@
     <!-- /.catchword__block -->
   </section>
   <!-- /.catchword -->
-  <section class="partners container-wrap">
+  <section class="partners container-wrap wow fadeIn">
     <div class="partners__cards">
       <a class="partners__cards-card">
         <img src="img/codecanyon-light-background.png" alt="" class="card-image" style="min-height:47px;">
@@ -294,7 +286,7 @@
     </div>
   </section>
   <!-- /.partrens -->
-  <footer class="footer footer-section" id="footerId">
+  <footer class="footer footer-section wow fadeIn" id="footerId">
     <div class="footer__col footer-img__left">
       <img src="img/footer-img__left.png" alt="">
     </div>
@@ -334,9 +326,9 @@
   <div class="scrollUp-button">
     <a class="scrollUp"></a>
   </div>
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
   <script src="js/jquery-3.5.1.min.js"></script>
+  <script src="js/jquery.fancybox.min.js"></script>
+  <script src="js/wow.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

@@ -1,7 +1,10 @@
 $(document).ready(function() {
+  /* Инициализируем wow js */
+    
+    new WOW().init();
 
+  /* Инициализируем wow js */
   /* для табов */
-	/* (function($) {
     $(function() {
       
       $('ul.tabs__caption').on('click', 'li:not(.active)', function() {
@@ -11,7 +14,7 @@ $(document).ready(function() {
       });
       
     });
-    })(jQuery); */
+
   /* для табов */
 
   /* Скрипт для плавных якорей */
@@ -42,5 +45,24 @@ $(document).ready(function() {
     return false;
   });
   /* Скрипт кнопки наверх */
-  
+  /* Скрипт для вставки видео на сайт через Api youtube */
+  /* var player;
+  $('.video__button-play').on('click', 
+  function onYouTubeIframeAPIReady() {
+    player = new YT.Player('player', {
+      height: '460',
+      width: '100%',
+      videoId: 'EtUZpEwaif4',
+      events: {
+        'onReady': videoPlay,
+      }
+    });
+  })
+
+  function videoPlay(event){
+    event.target.playVideo();
+  }; */
+  /* Скрипт для вставки видео на сайт через Api youtube */
+
+
 }); 
