@@ -1,4 +1,7 @@
 $(document).ready(function() {
+  var modal = $('.modal'),
+  modalBtn = $('[data-toggle=modal]'),
+  closeBtn = $('.modal__close');
   /* Инициализируем wow js */
     
     new WOW().init();
@@ -17,8 +20,18 @@ $(document).ready(function() {
 
   /* для табов */
 
-  /* Скрипт для плавных якорей */
+  /* Скрипт для плавной прокрутки */
   $("a.subheader__menu-item").click(function(){
+    $("html, body").animate({
+      scrollTop: $($(this).attr("href")).offset().top + "px"
+    }, {
+      duration: 1000,
+      easing: "swing"
+    });
+    return false;
+  });
+  
+  $("a.block-button").click(function(){
     $("html, body").animate({
       scrollTop: $($(this).attr("href")).offset().top + "px"
     }, {
@@ -44,25 +57,27 @@ $(document).ready(function() {
     }, 500);
     return false;
   });
-  /* Скрипт кнопки наверх */
-  /* Скрипт для вставки видео на сайт через Api youtube */
-  /* var player;
-  $('.video__button-play').on('click', 
-  function onYouTubeIframeAPIReady() {
-    player = new YT.Player('player', {
-      height: '460',
-      width: '100%',
-      videoId: 'EtUZpEwaif4',
-      events: {
-        'onReady': videoPlay,
-      }
-    });
-  })
+  
+  /* скрипт для модального окна */
 
-  function videoPlay(event){
-    event.target.playVideo();
-  }; */
-  /* Скрипт для вставки видео на сайт через Api youtube */
+  modalBtn.on('click', function () {
+    modal.toggleClass('modal--visible');
+  });
+  closeBtn.on('click', function () {
+    modal.toggleClass('modal--visible');
+  });
 
+  $(this).keydown(function(eventObject){
+    if (eventObject.which == 27)
+      modal.removeClass('modal--visible');
+  });
+
+  $(document).mouseup(function (e) {
+    if (modal.has(e.target).length === 0){
+        modal.removeClass('modal--visible');
+    }
+  });
+
+  /* скрипт для модального окна */
 
 }); 
