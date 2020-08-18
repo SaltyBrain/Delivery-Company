@@ -369,6 +369,7 @@ body {
 
 .scrollUp-button {
   position: fixed;
+  display: none;
   z-index: 100;
   top: 550px;
   right: 100px;

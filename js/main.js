@@ -2,11 +2,8 @@ $(document).ready(function() {
   var modal = $('.modal'),
   modalBtn = $('[data-toggle=modal]'),
   closeBtn = $('.modal__close');
-  /* Инициализируем wow js */
-    
-    new WOW().init();
+  const scrollUp = $('.scrollUp-button');
 
-  /* Инициализируем wow js */
   /* для табов */
     $(function() {
       
@@ -30,7 +27,7 @@ $(document).ready(function() {
     });
     return false;
   });
-  
+
   $("a.block-button").click(function(){
     $("html, body").animate({
       scrollTop: $($(this).attr("href")).offset().top + "px"
@@ -45,19 +42,24 @@ $(document).ready(function() {
   /* Скрипт кнопки наверх */
   $(window).scroll(function () {
 
-    if ($(this).scrollTop() > 300) {
-        $('a.scrollUp').fadeIn();
+    if ($(this).scrollTop() > 600) {
+      scrollUp.fadeIn();
     } else {
-        $('a.scrollUp').fadeOut();
+      scrollUp.fadeOut();
     }
     });
-  $('a.scrollUp').click(function () {
+    scrollUp.click(function () {
     $('body,html').animate({
         scrollTop: 0
     }, 500);
     return false;
   });
-  
+  /* Скрипт кнопки наверх */
+  /* Инициализируем wow js */
+    
+  new WOW().init();
+
+  /* Инициализируем wow js */
   /* скрипт для модального окна */
 
   modalBtn.on('click', function () {
